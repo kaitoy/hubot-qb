@@ -1,6 +1,6 @@
 module.exports = (robot) ->
 
-  robot.hear /HOE|HP|CD|MB|JD|ERP|HHS|RM/i, (res) ->
+  robot.hear /HOE|HP|CD|MB|JD|ERP|HHS|RM|NNM/i, (res) ->
     res.send res.random [
       '僕と契約して魔法少女になってよ!',
       '君は、本当に神になるつもりかい!?',
