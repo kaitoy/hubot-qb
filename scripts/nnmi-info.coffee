@@ -65,7 +65,10 @@ module.exports = (robot) ->
   robot.respond /ni list$/i, (res) ->
     memory = recall robot
     list = ''
-    for hp_ver, info of memory
+    hp_vers = Object.keys memory
+    hp_vers.sort()
+    for hp_ver in hp_vers
+      info = memory[hp_ver]
       jp1_ver = if info.jp1_ver? then info.jp1_ver else 'N/A'
       jdk_ver = if info.jdk_ver? then info.jdk_ver else '???'
       list += "#{hp_ver} -> #{jp1_ver} (JDK #{jdk_ver})\n"
