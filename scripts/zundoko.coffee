@@ -1,6 +1,6 @@
 module.exports = (robot) ->
 
-  robot.hear /ズンドコ|ずんどこ|/i, (res) ->
+  robot.respond /ズンドコ|ずんどこ|zundoko/i, (res) ->
     kiyoshi 0, res
 
 kiyoshi = (zunCount, res) ->
